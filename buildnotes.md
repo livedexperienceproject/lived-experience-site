@@ -21,7 +21,7 @@ Push to staging to initiate a build on Travis.ci. Settings for the build are in 
 
 ## Deploy
 
-A pull request to master has to be generated. This will be laid out better once we have the domain pointed and are ready to push live.
+A pull request to master has to be generated.
 
 ## Git
 

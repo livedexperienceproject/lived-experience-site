@@ -3,10 +3,7 @@
 title: Lived Experience Project
 email: your-email@example.com
 description: >-
-  The Lived Experience Project is an Omaha-based
-  juvenile justice research and facilitation project
-  that centers the experiences of system impacted youth
-  and their families.
+  The Lived Experience Project is an Omaha-based juvenile justice research and facilitation project that centers the experiences of system-impacted youth and their families.
 credits:
 author: jeff
 baseurl: ""
@@ -52,7 +49,7 @@ urlimg: '/images/'
 logo: "logo.png"
 
 paginate: 5                      # Paginates all X entries
-paginate_path: "news/page:num"   # Pagination path › Important for news page in /news/ to work
+paginate_path: "blog/page:num"   # Pagination path › Important for blog page in /blog/ to work
 
 
 # Theme works best with Kramdown (using the table of contents function)

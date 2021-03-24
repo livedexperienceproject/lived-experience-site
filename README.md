@@ -1,2 +1,2 @@
-# lived-experience-site
-Setting up the publishing pipeline.
+# Lived Experience Project
+This repo contains the guts (and spirit) of `discoverlexproject.com`.

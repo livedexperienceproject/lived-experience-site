@@ -148,7 +148,7 @@ var btsearch_stem = {"words": [
                     d = $.trim(d);
 
                     if (d !== '') {
-                         out = '<p class="error">Uh oh, nothing found for "'+$('#typeahead').val()+'"</p>';
+                         out = '<p class="error">Sorry, nothing found for "'+$('#typeahead').val()+'"</p>';
                     }
                     d_w = d.split(' ');
                     d = '';
@@ -207,8 +207,11 @@ var btsearch_stem = {"words": [
                          found = new Array();
                          for (i = 0; i < btsearch_in.pages.length; i++)
                          {
-                              var score = 1000000000;
-                              var s_t = btsearch_in.pages[i].text;
+                              var score = 1000000000,
+                                  s_t = btsearch_in.pages[i].text,
+                                  s_h = btsearch_in.pages[i].title;
+                                  s_tags = btsearch_in.pages[i].tags;
+
                               for (f = 0; f < d_w.length; f++)
                               {
                                    var pat = new RegExp(d_w[f], 'i');
@@ -231,7 +234,9 @@ var btsearch_stem = {"words": [
                                         {
                                              patr = new RegExp('(' + d_w[f] + ')', 'i');
                                         }
+                                        s_h = s_h.replace(patr, "<mark>$1</mark>");
                                         s_t = s_t.replace(patr, "<mark>$1</mark>");
+                                        s_tags = s_tags.replace(patr, "<mark>$1</mark>");
                                    }
                                    if (btsearch_in.pages[i].tags.search(pat) != -1)
                                    {
@@ -241,7 +246,7 @@ var btsearch_stem = {"words": [
                               }
                               if (score < 1000000000)
                               {
-                                   found[c++] = score + '^' + btsearch_in.pages[i].title + '^' + s_t + '^' + btsearch_in.pages[i].loc + '^' + btsearch_in.pages[i].tags;
+                                   found[c++] = score + '^' + s_h + '^' + s_t + '^' + btsearch_in.pages[i].loc + '^' + s_tags;
                               }
                          }
 
@@ -294,9 +299,15 @@ var btsearch_stem = {"words": [
                                              if (set.showTags)
                                              {
                                                   var tags = fo[4].trim().split(' ').map(function(tag) {
-                                                       return '<a tabindex="-1" href="/topics/' + tag + '">' + tag + '</a>';
+                                                       if (tag.toLowerCase().search(d) >= 0) {
+                                                            return '<a tabindex="-1" class="tag" href="/topic/' + tag + '">' + tag + '</a>';
+                                                       } else {
+                                                            return null;
+                                                       }
                                                   }).join(" ");
-                                                  out += '<span class="tags">' + tags + '</span>';
+                                                  if (tags.length > 0) {
+                                                       out += '<span class="tags">' + tags + '</span>';
+                                                  }
                                              }
 
                                              out += "</div>";

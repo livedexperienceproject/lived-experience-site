@@ -3,7 +3,7 @@ layout: page
 title:  "Welcome to our new website"
 subheadline: "It's here!"
 date:   2021-02-24 12:30
-meta_teaser: "This text is the meta_teaser."
+meta_teaser: "Lived Experience Project Nebraska"
 teaser: "Welcome to the Lived Experience Project website! We've been around for awhile, but this way to connect with us and our work is brand new."
 header: 'no'
 image:

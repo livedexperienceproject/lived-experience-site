@@ -2,14 +2,15 @@
 layout: null
 permalink: /search/search.json
 ---
-{ "pages" : [{% for post in site.posts %}
+{ "pages" : [{% for post in site.posts %}{% unless post.exclude_from_search == true %}
     {
         "title": {{ post.title | just_text | jsonify }},
         "loc": "{{ post.url | remove:'index.html' }}",
         "text": {% if post.description %}{{ post.description | long_description | jsonify }}{% else %}{{ post.content | long_description | jsonify }}{% endif %},
         "tags": "{% if post.tags %}{% for tag in post.tags %}{{ tag }} {% endfor %}{% endif %}"
-    },{% endfor %}
-{% for post in site.pages %}{% capture should_search %}{{ post.url | should_search }}{% endcapture %}{% if post.layout != 'nil' and post.layout != 'feed' and should_search == 'true' %}
+    },{% endunless %}{% endfor %}
+
+{% for post in site.pages %}{% capture should_search %}{{ post.url | should_search }}{% endcapture %}{% if post.layout != 'nil' and post.layout != 'feed' and should_search == 'true' and post.exclude_from_search != true %}
     {
         "title": {{ post.title | just_text | jsonify }},
         "loc": "{% if post.external %}{{ post.external }}{% else %}{{ post.url | fix_projects | remove:'index.html' }}{% endif %}",

@@ -11,6 +11,7 @@ gallery:
       caption: Gallery example 2
     - image_url: lex-community.jpg
       caption: Gallery example 3
+exclude_from_search: true
 ---
 {: #toc }
 *  TOC

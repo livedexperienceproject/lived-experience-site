@@ -275,6 +275,10 @@ code {
 ul, ol {
   margin-left: 20px;
   padding: 0;
+
+  ul, ol {
+    margin-top: 0;
+  }
 }
 li {
   margin-left: 0;
@@ -320,20 +324,20 @@ blockquote {
   margin: 1rem 0;
   padding: .5rem;
   position: relative;
-  text-indent: 3.5ch;
 
   &::before {
     color: desaturate(lighten($ci-3, 25%), 25%);
     content: '“';
     font-size: 120px;
-    left: -40px;
+    left: -1rem;
     position: absolute;
-    top: -60px;
+    top: -54px;
   }
 
   p {
     color: $body-bg;
     margin: .15rem;
+    margin-left: 1.5em;
   }
 
   a {

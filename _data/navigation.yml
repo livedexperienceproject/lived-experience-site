@@ -21,8 +21,8 @@
 #  url: "/about/methodology/"
 #  side: left
 
-- title: News
-  url: "/news/"
+- title: Blog
+  url: "/blog/"
   side: left
 
 - title: "Search"

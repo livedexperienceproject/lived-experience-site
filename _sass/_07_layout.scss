@@ -251,7 +251,8 @@ body.video cite { color: #fff; }
 /* Meta
 ------------------------------------------------------------------- */
 
-#page-meta {
+#page-meta,
+#searchresults .meta {
   color: $grey-9;
 
   a {
@@ -298,6 +299,10 @@ body.video cite { color: #fff; }
       }
     }
   }
+}
+
+#searchresults .meta .tags .tag {
+  font-size: .7em;
 }
 
 
