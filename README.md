@@ -1,2 +1,3 @@
-# lived-experience-site
-Setting up the publishing pipeline.
+# discoverlexproject.com
+
+The heart and soul (and code) of the Lived Experience Project website.
