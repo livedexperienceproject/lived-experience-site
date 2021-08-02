@@ -1,2 +1,3 @@
-# Lived Experience Project
-This repo contains the guts (and spirit) of `discoverlexproject.com`.
+# discoverlexproject.com
+
+The heart and soul (and code) of the Lived Experience Project website.
