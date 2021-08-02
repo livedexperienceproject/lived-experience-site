@@ -10,8 +10,10 @@
     url: "/discovering-your-power/"
   - title: "Interviews"
     url: "/interviews/"
-  - title: "System facilitation"
+  - title: "System Facilitation"
     url: "/system-facilitation/"
+  - title: "System Facilitation Registration"
+    url: "/system-facilitation/registration/"
 
 - title: Meet the Team
   url: "/team/"

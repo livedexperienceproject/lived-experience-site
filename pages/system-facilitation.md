@@ -33,3 +33,5 @@ The “Lived Experience” project is a research collaboration between The Sherw
 - We can provide ongoing coaching and support
 
 If you have questions about our facilitated sessions, please contact facilitator [Andrew Aleman](mailto:andrew@terralunacollaborative.com).
+
+[Click here to register.](/system-facilitation/registration/)
