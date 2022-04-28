@@ -27,7 +27,7 @@
 				<p>
 				<span class="tags">{% for tag in page.tags %}<a class="tag p-category" href="/{{ site.tag_page_dir}}/{{tag | slugify}}">{{tag}}</a>{% endfor %}</span>
 				{% if page.date %}
-				<time class="icon-calendar pr20" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"> {{ page.date | date: "%Y-%m-%d" }}</time>
+				<!-- <time class="icon-calendar pr20" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"> {{ page.date | date: "%Y-%m-%d" }}</time> -->
 				{% endif %}
 
 				{% if page.categories != empty %}<span class="icon-archive pr20"> {{ page.categories | category_links }}{% endif %}</span>

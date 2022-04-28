@@ -67,7 +67,7 @@ format: frontpage
             {% endif %}
             <!-- {% if post.subheadline %}<p class="subheadline">{{ post.subheadline }}</p>{% endif %} -->
             <div class="homepage__post-hero-content">
-                <span class="homepage__post-hero-subhed"><time class="dt-published" datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %d, %Y"}}</time></span>
+                <span class="homepage__post-hero-subhed"><!-- <time class="dt-published" datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %d, %Y"}}</time> --></span>
                 <h3 class="font-size-h2"><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
                 <p>
                     {% if post.meta_description %}{{ post.meta_description | strip_html | escape }}{% else post.teaser %}{{ post.teaser | strip_html | escape }}{% endif %}
