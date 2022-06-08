@@ -6,7 +6,7 @@ layout: default
 		<h1>{{ page.title }}</h1>
 
 		<dl>
-			{% for post in site.categories[page.category] %}<dt><time class="dt-published" datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %d, %Y"}}</time> › <a class="u-url" href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="Read {{ post.title | escape_once }}"><strong class="p-name">{{ post.title }}</strong></a></dt>
+			{% for post in site.categories[page.category] %}<dt><!-- <time class="dt-published" datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate>{{ post.date | date: "%b %d, %Y"}}</time> ›  --><a class="u-url" href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="Read {{ post.title | escape_once }}"><strong class="p-name">{{ post.title }}</strong></a></dt>
 			<dd>{% if post.meta_description %}{{ post.meta_description | strip_html | escape }}{% elsif post.teaser %}{{ post.teaser | strip_html | escape }}{% endif %}</dd>{% endfor %}
 		</dl>
 	</div><!-- /.small-12.columns -->
